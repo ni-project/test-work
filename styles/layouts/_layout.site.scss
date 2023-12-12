@@ -1,0 +1,28 @@
+
+.root {
+  @include full-wh(table);
+
+  table-layout: fixed;
+}
+
+.wrapper {
+  @include full-width(block);
+
+  max-width: $siteContentWidth;
+  margin: 0 auto;
+  padding: 0;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    max-width: 100%;
+    padding: 0 32px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .wrapper {
+    padding: 0 24px;
+  }
+}

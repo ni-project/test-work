@@ -1,0 +1,248 @@
+
+.order {
+  @include full-width(block);
+
+  padding: 120px 0 150px 0;
+  background: {
+    image: url('/images/order/background.png');
+    color: $primary;
+    size: cover;
+    position: 50% 50%;
+    repeat: no-repeat;
+  };
+
+  h2, .h2 {
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+
+    span {
+      color: $blue;
+    }
+  }
+
+  &_description {
+    @include full-width(block);
+    @include font(18px, normal, $secondary, 400);
+
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  &_step {
+    $this: &;
+    @include full-width(flex);
+
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 30px;
+    max-width: $siteContentWidth;
+    margin: 0 auto;
+    position: relative;
+
+    &-decoration {
+      @include full-width(block);
+
+      height: 6px;
+      transform: scaleX(-1);
+      position: absolute;
+      left: 50%;
+      top: 47px;
+      z-index: 1;
+
+      line {
+        stroke: $gray;
+        fill: none;
+        stroke-width: 6px;
+        stroke-dasharray: 0, 27;
+        stroke-dashoffset: 0;
+        stroke-linecap: round;
+        animation: 1s DotAnimate 0s linear infinite;
+      }
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 20px;
+      margin-top: 80px;
+      padding: 0 12px;
+
+      @for $index from 1 through 5 {
+        $animationDelay: $index * 0.4;
+
+        &:nth-child(#{$index}) {
+          #{$this}-bubble {
+            &:before {
+              animation: 10s BubbleAnimate #{$animationDelay}s ease-out infinite;
+            }
+          }
+        }
+      }
+    }
+
+    &-bubble {
+      position: relative;
+
+      &_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        background: $blue;
+        border: 5px solid $blueDark;
+        border-radius: 100%;
+        position: relative;
+        z-index: 2;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 100px;
+        background: $blueDark;
+        border-radius: 100%;
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+    }
+
+    &-caption {
+      @include font(16px, normal, $white, 400);
+
+      text-align: center;
+    }
+  }
+
+  &-form {
+    $orderFormColumn: 3;
+
+    @include full-width(grid);
+
+    grid-template-columns: repeat($orderFormColumn, 1fr);
+    gap: 30px;
+    margin-top: 80px;
+
+    @for $index from 1 through $orderFormColumn {
+      &_span-#{$index} {
+        grid-column: span $index;
+      }
+    }
+
+    @for $index from 1 through $orderFormColumn {
+      &_column-#{$index} {
+        grid-column: $index;
+      }
+    }
+
+    .input-range {
+      margin-top: 20px;
+    }
+
+    .button-white {
+      border: 2px solid $blue;
+    }
+
+    &_range {
+      &-title {
+        @include full-width(flex);
+
+        align-items: flex-start;
+        justify-content: space-between;
+        font-size: 18px;
+        color: #ffffff;
+      }
+
+      &-caption {
+        padding-right: 24px;
+      }
+
+      &-value {
+        font-weight: 600;
+        white-space: nowrap;
+      }
+    }
+
+    button[type='submit'] {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .order {
+    &_step {
+      .swiper {
+        &-slide {
+          width: 210px;
+        }
+      }
+    }
+
+    &-form {
+      $orderFormColumn: 2;
+
+      grid-template-columns: repeat($orderFormColumn, 1fr);
+
+      @for $index from 1 through $orderFormColumn {
+        &_span-#{$index} {
+          grid-column: span $index;
+
+          &_reverse {
+            grid-column: span $index;
+          }
+        }
+      }
+
+      button[type='submit'] {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .order {
+    padding: 60px 0;
+
+    &_step {
+      .swiper {
+        &-slide {
+          margin-top: 60px;
+        }
+      }
+    }
+
+    &-form {
+      $orderFormColumn: 3;
+
+      grid-template-columns: 1fr;
+      margin-top: 60px;
+
+      @for $index from 1 through $orderFormColumn {
+        &_span-#{$index} {
+          grid-column: span 1;
+
+          &_reverse {
+            grid-column: span 1;
+          }
+        }
+      }
+
+      @for $index from 1 through $orderFormColumn {
+        &_column-#{$index} {
+          grid-column: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+
+.button {
+  @include full-width(flex);
+  @include font(12px, normal, $primary, 400);
+
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  height: 43px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  cursor: pointer;
+  transition: 0.2s;
+
+  svg path {
+    fill: $black;
+    transition: 0.2s;
+  }
+
+  &-sm {
+    height: 43px;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  &-lg {
+    height: 48px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  &-blue {
+    background: $blue;
+    color: $white;
+    border: 1px solid $white;
+
+    &:hover {
+      background: $blueLight;
+    }
+
+    svg path {
+      fill: $white;
+      transition: 0.2s;
+    }
+  }
+
+  &-white {
+    background: $white;
+    border: 1px solid #6F6D7B;
+
+    svg path {
+      fill: $primary;
+    }
+
+    &:hover {
+      background: $blueLight;
+      color: $white;
+      border: 1px solid $white;
+
+      svg path {
+        fill: $white;
+      }
+    }
+  }
+
+  &-file {
+    input {
+      display: none;
+    }
+  }
+}

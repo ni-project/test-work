@@ -1,0 +1,22 @@
+
+h1, .h1 {
+  @include font($H1_fontSize, normal, $H_color, 700);
+
+  margin: 0;
+}
+
+h2, .h2 {
+  @include font($H2_fontSize, normal, $H_color, 700);
+
+  margin: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  h1, .h1 {
+    font-size: $H1_fontSize_mobile;
+  }
+
+  h2, .h2 {
+    font-size: $H2_fontSize_mobile;
+  }
+}

@@ -1,0 +1,62 @@
+
+// BUBBLE ANIMATE
+@-webkit-keyframes BubbleAnimate {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  5% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  20% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+@keyframes BubbleAnimate {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  5% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  20% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.6);
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1);
+  }
+}
+
+// DOT ANIMATE
+@-webkit-keyframes DotAnimate {
+  from { stroke-dashoffset: 0 }
+  to { stroke-dashoffset: 27 }
+}
+
+@keyframes DotAnimate {
+  from { stroke-dashoffset: 0 }
+  to { stroke-dashoffset: 27 }
+}

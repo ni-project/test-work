@@ -1,0 +1,22 @@
+
+* {
+  box-sizing: border-box;
+
+  scrollbar-width: thin;
+  scrollbar-color: $blue $primaryLight;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: $primaryLight;
+
+    &-thumb {
+      background: $blue;
+      border-radius: 10px;
+    }
+  }
+}
+
+.break {
+  display: inline;
+}

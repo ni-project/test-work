@@ -1,0 +1,21 @@
+
+@mixin full-width($value: block) {
+  display: $value;
+  width: 100%;
+}
+
+@mixin full-wh($value: block) {
+  @include full-width($value);
+
+  height: 100%;
+}
+
+@mixin font($fontSize, $lineHeight, $color, $fontWight) {
+  font: {
+    size: $fontSize;
+    weight: $fontWight;
+  }
+
+  line-height: $lineHeight;
+  color: $color;
+}

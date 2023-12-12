@@ -1,0 +1,166 @@
+
+.banner {
+  @include full-width(flex);
+
+  padding: 200px 0 100px 0;
+  min-height: 860px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s;
+
+  picture,
+  img {
+    @include full-wh(block);
+
+    object-fit: cover;
+    transform: translateY(0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 2;
+  }
+
+  h1, .h1 {
+    text-transform: uppercase;
+    transition: 0.3s;
+
+    span {
+      color: $blue;
+    }
+  }
+
+  &_history {
+    @include full-width(block);
+
+    margin-top: 80px;
+
+    &-caption {
+      @include font(20px, normal, $black, 700);
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      margin-top: 10px;
+
+      li {
+        @include font(20px, normal, $black, 400);
+
+        padding-left: 25px;
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 25px;
+          height: 22px;
+          background: {
+            image: url('/images/icons/icon-hyphen.svg');
+            size: contain;
+            position: 50% 50%;
+            repeat: no-repeat;
+          };
+          position: absolute;
+          left: 0;
+          top: 2px;
+        }
+      }
+    }
+  }
+
+  &_controls {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-top: 80px;
+
+    .button {
+      max-width: 183px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .banner {
+    min-height: 100vh;
+    padding: 180px 0 100px 0;
+
+    h1, .h1 {
+      font-size: 44px;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .banner {
+    padding: 160px 0 100px 0;
+
+    h1, .h1 {
+      font-size: 40px;
+    }
+
+    &_history {
+      margin-top: 60px;
+    }
+
+    &_controls {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .banner {
+    min-height: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner {
+    min-height: 500px;
+    padding: 114px 0 60px 0;
+
+    h1, .h1 {
+      font-size: 34px;
+
+      .break {
+        display: none;
+      }
+    }
+
+    &_history {
+      margin-top: 40px;
+
+      &-caption {
+        font-size: 16px;
+      }
+
+      ul li {
+        font-size: 16px;
+      }
+    }
+
+    &_controls {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .banner {
+    &_controls {
+      flex-direction: column;
+      row-gap: 16px;
+
+      .button {
+        max-width: 100%;
+      }
+    }
+  }
+}

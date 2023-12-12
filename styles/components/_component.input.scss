@@ -1,0 +1,45 @@
+
+.input {
+  input {
+    @include full-width(block);
+    @include font(18px, normal, $primary, 400);
+
+    height: 48px;
+    padding: 0 10px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid $white;
+    border-radius: 3px;
+
+    &::placeholder {
+      @include font(18px, normal, $primary, 400);
+    }
+
+    &[type='range'] {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      padding: 0;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid $white;
+      border-radius: 12px;
+      cursor: pointer;
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 26px;
+        height: 26px;
+        background: $blue;
+        border: 3px solid $blueDark;
+        border-radius: 100%;
+      }
+      &::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background: $blue;
+        border: 3px solid $blueDark;
+        border-radius: 100%;
+      }
+    }
+  }
+}

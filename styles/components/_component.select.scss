@@ -1,0 +1,79 @@
+
+.select {
+  .selectric {
+    $this: &;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid $white;
+    border-radius: 3px;
+
+    .label {
+      @include font(18px, normal, $primary, 400);
+
+      height: 46px;
+      line-height: 46px;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 46px;
+      background: transparent;
+      border: 0;
+
+      &:after {
+        width: 20px;
+        height: 20px;
+        background: {
+          color: transparent;
+          image: url('/images/icons/select-arrow.png');
+          size: contain;
+          repeat: no-repeat;
+        };
+        border: 0;
+      }
+    }
+
+    &-open {
+      .button {
+        &:after {
+          background: {
+            image: url('/images/icons/select-arrow-active.png');
+          };
+        }
+      }
+
+      .selectric {
+        background: $primaryLight;
+        border: 1px solid $primaryLight;
+        border-radius: 3px 3px 0 0;
+
+        .label {
+          color: $white;
+        }
+
+        &-items {
+          border: 1px solid $primaryLight;
+          border-radius: 0 0 3px 3px;
+
+          li {
+            @include font(18px, normal, $white, 400);
+
+            &.highlighted {
+              background: transparent;
+              color: $blue;
+            }
+
+            &:hover {
+              background: transparent;
+              color: $blue;
+            }
+          }
+
+          background: $primary;
+        }
+      }
+    }
+  }
+}
+
