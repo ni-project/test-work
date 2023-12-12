@@ -1582,12 +1582,12 @@ strong {
       width: 20px;
       height: 20px;
       background-color: transparent;
-      background-image: url("images/icons/select-arrow.png");
+      background-image: url("../images/icons/select-arrow.png");
       background-size: contain;
       background-repeat: no-repeat;
       border: 0; }
   .select .selectric-open .button:after {
-    background-image: url("images/icons/select-arrow-active.png"); }
+    background-image: url("../images/icons/select-arrow-active.png"); }
   .select .selectric-open .selectric {
     background: #3D4050;
     border: 1px solid #3D4050;
