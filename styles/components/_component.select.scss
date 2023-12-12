@@ -26,7 +26,7 @@
         height: 20px;
         background: {
           color: transparent;
-          image: url('/images/icons/select-arrow.png');
+          image: url('images/icons/select-arrow.png');
           size: contain;
           repeat: no-repeat;
         };
@@ -38,7 +38,7 @@
       .button {
         &:after {
           background: {
-            image: url('/images/icons/select-arrow-active.png');
+            image: url('images/icons/select-arrow-active.png');
           };
         }
       }
