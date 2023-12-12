@@ -1722,7 +1722,7 @@ strong {
   display: block;
   width: 100%;
   padding: 120px 0 150px 0;
-  background-image: url("/images/order/background.png");
+  background-image: url("../images/order/background.png");
   background-color: #272733;
   background-size: cover;
   background-position: 50% 50%;
