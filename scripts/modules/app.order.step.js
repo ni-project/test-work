@@ -1,5 +1,5 @@
 
-export default class AppOrderStep {
+class AppOrderStep {
     constructor() {
         this.bindEvents()
     }
@@ -53,3 +53,5 @@ export default class AppOrderStep {
         });
     };
 }
+
+new AppOrderStep();

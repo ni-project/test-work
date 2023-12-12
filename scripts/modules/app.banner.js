@@ -1,5 +1,5 @@
 
-export default class AppBanner {
+class AppBanner {
     constructor() {
         this.bindEvents()
     }
@@ -35,3 +35,5 @@ export default class AppBanner {
         this.parallaxOffsetBanner();
     };
 }
+
+new AppBanner();

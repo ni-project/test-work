@@ -1,5 +1,5 @@
 
-export default class AppForm {
+class AppForm {
     constructor() {
         this.bindEvents()
     }
@@ -57,3 +57,5 @@ export default class AppForm {
         elValueContainer.innerText = value + ' %';
     };
 }
+
+new AppForm();

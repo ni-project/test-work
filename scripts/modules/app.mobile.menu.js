@@ -1,5 +1,5 @@
 
-export default class AppMobileMenu {
+class AppMobileMenu {
     constructor() {
         this.bindEvents()
     }
@@ -70,3 +70,5 @@ export default class AppMobileMenu {
         }
     };
 }
+
+new AppMobileMenu();

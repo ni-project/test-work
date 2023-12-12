@@ -16,9 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
 
-    <script src="/scripts/vendors/jquery-1.12.4.min.js"></script>
-    <script src="/scripts/vendors/swiper-bundle.min.js"></script>
-    <script src="/scripts/vendors/jquery.selectric.min.js"></script>
+    <script src="scripts/vendors/jquery-1.12.4.min.js"></script>
+    <script src="scripts/vendors/swiper-bundle.min.js"></script>
+    <script src="scripts/vendors/jquery.selectric.min.js"></script>
 
     <link rel="stylesheet" href="styles/app.css">
 </head>
@@ -82,8 +82,8 @@
         <section>
             <div class="banner js-banner">
                 <picture>
-                    <source srcset="/images/banner/background-mobile.webp" media="(max-width: 450px)" type="image/webp"/>
-                    <img src="/images/banner/background.jpg" alt="" draggable="false" />
+                    <source srcset="images/banner/background-mobile.webp" media="(max-width: 450px)" type="image/webp"/>
+                    <img src="images/banner/background.jpg" alt="" draggable="false" />
                 </picture>
 
                 <div class="wrapper">
@@ -144,7 +144,7 @@
                             <div class="order_step-bubble">
                                 <div class="order_step-bubble_icon">
                                     <svg width="56" height="55">
-                                        <use href="/images/icons/order-step-sprite.svg#search" />
+                                        <use href="images/icons/order-step-sprite.svg#search" />
                                     </svg>
                                 </div>
                             </div>
@@ -162,7 +162,7 @@
                             <div class="order_step-bubble">
                                 <div class="order_step-bubble_icon">
                                     <svg width="56" height="55">
-                                        <use href="/images/icons/order-step-sprite.svg#percent" />
+                                        <use href="images/icons/order-step-sprite.svg#percent" />
                                     </svg>
                                 </div>
                             </div>
@@ -180,7 +180,7 @@
                             <div class="order_step-bubble">
                                 <div class="order_step-bubble_icon">
                                     <svg width="56" height="55">
-                                        <use href="/images/icons/order-step-sprite.svg#file" />
+                                        <use href="images/icons/order-step-sprite.svg#file" />
                                     </svg>
                                 </div>
                             </div>
@@ -198,7 +198,7 @@
                             <div class="order_step-bubble">
                                 <div class="order_step-bubble_icon">
                                     <svg width="56" height="55">
-                                        <use href="/images/icons/order-step-sprite.svg#message" />
+                                        <use href="images/icons/order-step-sprite.svg#message" />
                                     </svg>
                                 </div>
                             </div>
@@ -213,7 +213,7 @@
                             <div class="order_step-bubble">
                                 <div class="order_step-bubble_icon">
                                     <svg width="56" height="55">
-                                        <use href="/images/icons/order-step-sprite.svg#money" />
+                                        <use href="images/icons/order-step-sprite.svg#money" />
                                     </svg>
                                 </div>
                             </div>
@@ -312,17 +312,17 @@
                     <div class="footer_wrapper-cell">
 
                         <div class="footer_pay">
-                            <img src="/images/icons/icon-pay-qiwi.svg" alt="" draggable="false" />
+                            <img src="images/icons/icon-pay-qiwi.svg" alt="" draggable="false" />
                             <span>Qiwi wallet</span>
                         </div>
 
                         <div class="footer_pay">
-                            <img src="/images/icons/icon-pay-yandex.svg" alt="" draggable="false" />
+                            <img src="images/icons/icon-pay-yandex.svg" alt="" draggable="false" />
                             <span>Yandex Money</span>
                         </div>
 
                         <div class="footer_pay">
-                            <img src="/images/icons/icon-pay-webmoney.svg" alt="" draggable="false" />
+                            <img src="images/icons/icon-pay-webmoney.svg" alt="" draggable="false" />
                             <span>Web Money</span>
                         </div>
 
@@ -331,12 +331,12 @@
                     <div class="footer_wrapper-cell">
 
                         <a href="mailTo:info@ipsum228.com" class="footer_link">
-                            <img src="/images/icons/icon-email.svg" alt="" draggable="false" />
+                            <img src="images/icons/icon-email.svg" alt="" draggable="false" />
                             <span>info@ipsum228.com</span>
                         </a>
 
                         <a href="#vk" class="footer_link">
-                            <img src="/images/icons/icon-vk.svg" alt="" draggable="false" />
+                            <img src="images/icons/icon-vk.svg" alt="" draggable="false" />
                             <span>Мы вконтакте</span>
                         </a>
 
@@ -348,7 +348,10 @@
     </footer>
 </div>
 
-<script src="/scripts/app.js" type="module"></script>
+<script src="scripts/modules/app.mobile.menu.js"></script>
+<script src="scripts/modules/app.banner.js"></script>
+<script src="scripts/modules/app.order.step.js"></script>
+<script src="scripts/modules/app.form.js"></script>
 
 </body>
 </html>
